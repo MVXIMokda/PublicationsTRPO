@@ -1,0 +1,21 @@
+{% extends 'publications/base.html' %}
+{% block content %}
+
+<div class="header">
+    <h1>Публикации</h1>
+    <a href="/articles/create/" class="btn">Добавить публикацию</a>
+</div>
+
+{% for article in articles %}
+<div class="card">
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.content|truncatechars:200 }}</p>
+    <a href="/articles/{{ article.id }}/edit/" class="btn secondary">Редактировать</a>
+</div>
+{% empty %}
+<div class="card">
+    <p>Тут пока пусто :(</p>
+</div>
+{% endfor %}
+
+{% endblock %}
