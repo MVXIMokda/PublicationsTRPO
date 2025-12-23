@@ -1,5 +1,3 @@
-# Course project for Software Engineering Theory
-
 # Usage
 
 ### Clone repo
@@ -9,7 +7,7 @@
 
 ### Change directory
 ```bash
-  cd AnimalShelter
+  cd PublicationsTRPO
 ```
 
 ### Clone repo
