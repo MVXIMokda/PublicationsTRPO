@@ -1,75 +1,132 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #f5f6fa;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #eef2ff;
     margin: 0;
     padding: 0;
+    color: #1f2937;
 }
 
 .container {
-    width: 800px;
-    margin: 40px auto;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 25px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 36px;
+    font-weight: 800;
+    color: #3b0d8a;
 }
 
 .btn {
-    padding: 10px 16px;
-    background: #4f46e5;
-    color: white;
+    display: inline-block;
+    padding: 14px 26px;
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(124, 58, 237, 0.35);
 }
 
 .btn.secondary {
-    background: #6b7280;
+    background: #d8b4fe;
+    color: #3b0d8a;
+}
+
+.btn.secondary:hover {
+    background: #c084fc;
+    color: #ffffff;
 }
 
 .card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
 .card h2 {
     margin-top: 0;
-    font-size: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #4c1d95;
 }
 
 .card p {
-    color: #374151;
-    line-height: 1.6;
+    color: #4b5563;
+    line-height: 1.9;
+    margin: 12px 0 18px 0;
+    font-size: 16px;
 }
 
 .form-group {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
 }
 
 input[type="text"],
 textarea {
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #d1d5db;
-    font-size: 14px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    border: 1px solid #c7d2fe;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.25);
 }
 
 textarea {
-    min-height: 140px;
+    min-height: 200px;
 }
 
 .actions {
-    margin-top: 20px;
+    margin-top: 28px;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #7c3aed;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

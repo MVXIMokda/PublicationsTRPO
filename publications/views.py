@@ -16,7 +16,7 @@ def article_create(request):
         form = ArticleForm()
     return render(request, 'publications/article_form.html', {
         'form': form,
-        'title': 'Create Article'
+        'title': 'Создание публикации'
     })
 
 def article_edit(request, id):
@@ -30,5 +30,5 @@ def article_edit(request, id):
         form = ArticleForm(instance=article)
     return render(request, 'publications/article_form.html', {
         'form': form,
-        'title': 'Edit Article'
+        'title': 'Редактирование публикации'
     })
