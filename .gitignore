@@ -1,29 +1,22 @@
-# Python
 __pycache__/
 *.py[cod]
 *.pyo
 
-# Virtual environment
 venv/
 .env/
 
-# Django
 db.sqlite3
 *.log
 media/
 staticfiles/
 
-# macOS
 .DS_Store
 
-# IDE / Editor
 .idea/
 .vscode/
 
-# Migrations cache
 **/migrations/__pycache__/
 
-# Test / coverage
 htmlcov/
 .coverage
 .pytest_cache/
